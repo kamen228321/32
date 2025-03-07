@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт с фоном</title>
+    <style>
+        /* Стиль для первого слайда */
+        .slide1 {
+            background-image: url('b3eab2e9-0c89-45f6-b6ee-4274142c13ff.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .slide1 .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .slide1 .intro-text {
+            position: absolute;
+            left: 20px;
+            font-size: 24px;
+            opacity: 0;
+            animation: fadeIn 3s forwards;
+            text-align: left;
+            max-width: 300px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide1 button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .slide1 button:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        /* Стиль для второго слайда */
+        .slide2 {
+            background-color: #2b2b2b;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .slide2 h1 {
+            font-size: 48px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Первый слайд -->
+    <div class="slide1">
+        <div class="content">
+            <div class="intro-text">
+                <p>Team ZOV - Международная киберспортивная организация, созданная в 2025 году. Основной офис команды базируется в г. Киев.</p>
+            </div>
+
+            <!-- Ссылка на второй слайд -->
+            <a href="#slide2">
+                <button>Команды</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Второй слайд -->
+    <div id="slide2" class="slide2">
+        <h1>COUNTER STRIKE 2</h1>
+    </div>
+
+</body>
+</html>
